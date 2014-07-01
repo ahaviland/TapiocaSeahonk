@@ -1,4 +1,4 @@
-def even_fib_below cap                         
+def even_fib_below cap               #finds even numbers in fibonacci sequence up to a given limit          
 	i=1                                     
 	evens=[]                                
 	while i <= cap                           
