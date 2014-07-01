@@ -5,7 +5,7 @@ in the interest of spending my time practicing Ruby and not Github, so indentati
 
 
 I think I could make these first 2 problems truely general with Inject and the Splat Operator, but I'm not 
-quite there yet.
+quite there yet. I've tried to resist the urge to impliment methods I've read about but don't really understand.
 =end
 
 
