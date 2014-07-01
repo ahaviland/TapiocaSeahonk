@@ -29,5 +29,3 @@ def three_or_five_mults cap                        #sums all multiples of 3 or 5
 return sum
 
 end
-
-p three_or_five_mults(1000)
