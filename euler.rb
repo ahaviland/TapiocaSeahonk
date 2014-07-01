@@ -46,6 +46,7 @@ end
 
 #################################################################################
                                                                   # Finds the largest prime factor of an input.
+                                                                  #
 def is_prime num                                                  # I had to define a seperate method for checking if
 	i=2                                                       # a number is prime first, although I bet
 	while i < num / 2                                         # there's a way to do this entire thing
@@ -53,10 +54,10 @@ def is_prime num                                                  # I had to def
 			return false                              # This problem was pretty similar to some of
 		else                                              # the AppAcademy sample questions, but I was able
 			i+=1                                      # to improve a tiny (unnoticable at this scale) bit
-			                                          # by not bothering to check for factors which would
-		end                                               # need to be multiplied by less than 2 to return
-		                                                  # the target number.
-	end
+			                                          # over the given solution by not bothering to 
+		end                                               # check for factors which would
+		                                                  # need to be multiplied by less than 2 to return
+	end                                                       # the target number.
 	return true
 end
 
