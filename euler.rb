@@ -60,10 +60,6 @@ def is_prime num                                                  # I had to def
 	return true
 end
 
-
-
-
-
 def largest_prime_factor num
 	prime_factors=[]
 	for i in 1...num
@@ -73,3 +69,5 @@ def largest_prime_factor num
 	end
 	prime_factors.pop
 end
+
+###############################################################################
