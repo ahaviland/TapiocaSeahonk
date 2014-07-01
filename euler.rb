@@ -1,15 +1,18 @@
-def even_fib_below cap                            #finds even numbers in fibonacci sequence up to a given limit          
-	i=1                                     
-	evens=[]                                
-	while i <= cap                           
-		if i % 2 ==0                     
-			evens << i             
-			
-		end                             
-		i+=i                            
-	end                                    
-	return [evens]                             
-end                
+def even_fib_below cap                            # sums even numbers in the fibonacci sequence below a given cap
+	i=1                                       # (answers seem to come up a little short. Haven't had a good 
+	sum=0                                     # look at WHY yet.)
+	evens = []
+	while i<cap
+		if i % 2 == 0
+			evens << i
+		end
+		i+=i		
+	end
+	evens.each do |even_fib|
+		sum += even_fib
+	end
+	sum
+end
 
 ##############################################################
 
