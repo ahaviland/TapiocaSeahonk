@@ -25,6 +25,7 @@ def three_or_five_mults (bottom, top, first_divisor, second_divisor)  # sums num
 return sum
 
 end
+
 ################################################################################
 
 def even_fib_below cap                            # sums even numbers in the fibonacci sequence below a given cap
@@ -41,4 +42,34 @@ def even_fib_below cap                            # sums even numbers in the fib
         sum += even_fib
       end
   sum
+end
+
+#################################################################################
+                                                                  # Finds the largest prime factor of an input.
+def is_prime num                                                  # I had to define a seperate method for checking if
+	i=2                                                       # a number is prime first, although I bet
+	while i < num / 2                                         # there's a way to do this entire thing
+		if num % i == 0                                   # inside a single method.
+			return false                              
+		else
+			i+=1
+			
+		end
+		
+	end
+	return true
+end
+
+
+
+
+
+def largest_prime_factor num
+	prime_factors=[]
+	for i in 1...num
+		if is_prime(i) == true && num % i == 0
+			prime_factors << i
+		end
+	end
+	prime_factors.pop
 end
