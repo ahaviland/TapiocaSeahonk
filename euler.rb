@@ -47,20 +47,17 @@ end
 #################################################################################
                                                                   # Finds the largest prime factor of an input.
                                                                   #
-def is_prime num                                                  # I had to define a seperate method for checking if
-	i=2                                                       # a number is prime first, although I bet
-	while i < num / 2                                         # there's a way to do this entire thing
-		if num % i == 0                                   # inside a single method.
-			return false                              # This problem was pretty similar to some of
-		else                                              # the AppAcademy sample questions, but I was able
-			i+=1                                      # to improve a tiny (unnoticable at this scale) bit
-			                                          # over the given solution by not bothering to 
-		end                                               # check for factors which would
+def is_prime possible_prime                                       # I had to define a seperate method for checking if
+  for i in 2...(possible_prime/2)                                 # a number is prime first, although I bet
+    if possible_prime % i == 0                                    # there's a way to do this entire thing
+      return false                                                # inside a single method.
+    end                                                           # This problem was pretty similar to some of
+  end                                                             # the AppAcademy sample questions, but I was able
+  return true                                                     # to improve a tiny (unnoticable at this scale) bit
+end                                                               # over the given solution by not bothering to 
+		                                                  # check for factors which would
 		                                                  # need to be multiplied by less than 2 to return
-	end                                                       # the target number.
-	return true
-end
-
+	                                                          # the target number.
 def largest_prime_factor num
 	prime_factors=[]
 	for i in 1...num
