@@ -50,12 +50,12 @@ def is_prime num                                                  # I had to def
 	i=2                                                       # a number is prime first, although I bet
 	while i < num / 2                                         # there's a way to do this entire thing
 		if num % i == 0                                   # inside a single method.
-			return false                              
-		else
-			i+=1
-			
-		end
-		
+			return false                              # This problem was pretty similar to some of
+		else                                              # the AppAcademy sample questions, but I was able
+			i+=1                                      # to improve a tiny (unnoticable at this scale) bit
+			                                          # by not bothering to check for factors which would
+		end                                               # need to be multiplied by less than 2 to return
+		                                                  # the target number.
 	end
 	return true
 end
