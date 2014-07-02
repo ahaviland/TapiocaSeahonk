@@ -69,3 +69,30 @@ def largest_prime_factor num
 end
 
 ###############################################################################
+
+def largest_palindrome_product(digits)                                      # Finds the largest palindrome number
+  lower = "1" + ("0" * digits)                                              # equal to 2 factors of a given length
+  upper = ("9" * digits)						    # 
+  lowest_factor = lower.to_i/10						    # I think the way I defined the ranges to
+  highest_factor = upper.to_i						    # look in is kind of wonky, but I couldn't
+  lowest_product = lowest_factor ** 2					    # think of a better way to do it.
+  highest_product = highest_factor ** 2
+  palindromes_in_range=[]
+  for i in lowest_product..highest_product
+  	if i.to_s == i.to_s.reverse
+  		palindromes_in_range << i
+  		
+  	end
+  end
+  palindromes_in_range.reverse!
+  for pal in palindromes_in_range
+  	for i in lowest_factor..highest_factor
+  		if pal % i == 0 && (pal/i).to_s.length == digits
+  			return pal
+  			
+  		end
+  	end
+  end
+end
+
+##############################################################
