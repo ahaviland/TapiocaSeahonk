@@ -48,7 +48,7 @@ end
                                                                   # Finds the largest prime factor of an input.
                                                                   #
 def is_prime possible_prime                                       # I had to define a seperate method for checking if
-  for i in 3..(possible_prime/2)                                 # a number is prime first, although I bet
+  for i in 3..(possible_prime/2)                                  # a number is prime first, although I bet
     if possible_prime % i == 0                                    # there's a way to do this entire thing
       return false                                                # inside a single method.
     end                                                           # This problem was pretty similar to some of
