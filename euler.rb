@@ -28,20 +28,21 @@ end
 
 ################################################################################
 
-def even_fib_below cap                            # sums even numbers in the fibonacci sequence below a given cap
-	i=1                                       # (answers seem to come up a little short. Haven't had a good 
-	sum=0                                     # look at WHY yet.)
-	evens = []
-	  while i<cap
-	    if i % 2 == 0
-	      evens << i
-	    end
-	    i+=i		
-	  end
-      evens.each do |even_fib|
-        sum += even_fib
-      end
-  sum
+def even_fib_below(cap)                                                   # Sums even numbers in the fibonacci
+	i=1								  # sequence below a given cap. Had a 
+	fibs=[0]							  # surprisingly tough time with this one.
+	while i<(cap)							  # I was prepared to leave it broken as
+		prev=fibs.last						  # a demonstration of honesty when I realized
+		fibs << i						  # I had just been doubling i instead of 
+		i+=prev							  # properly going through the fibonacci
+									  # sequence. Fixed now.
+	end
+	fibs.delete_if {|x| x % 2 !=0}
+	total = 0
+	for x in fibs
+		total+=x
+	end
+	total
 end
 
 #################################################################################
